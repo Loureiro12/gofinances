@@ -45,14 +45,14 @@ export const User = styled.View`
 export const UserGreeting = styled.Text`
   color: ${({ theme }) => theme.colors.shape};
 
-  font-size: ${RFValue(18)}px;
+  font-size: ${RFValue(16)}px;
   font-family: ${({ theme }) => theme.fonts.regular};
 `;
 
 export const UserName = styled.Text`
   color: ${({ theme }) => theme.colors.shape};
 
-  font-size: ${RFValue(18)}px;
+  font-size: ${RFValue(16)}px;
   font-family: ${({ theme }) => theme.fonts.bold};
 `;
 

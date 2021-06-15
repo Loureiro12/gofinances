@@ -23,18 +23,21 @@ import {
 export function Dashboard() {
   const data = [
     {
+      type: "positive",
       title: "Desenvolvimento de site",
       amount: "R$ 12.000,00",
       category: { name: "name", icon: "dollar-sign" },
       date: "13/04/2020",
     },
     {
+      type: "negative",
       title: "Desenvolvimento de site",
       amount: "R$ 12.000,00",
       category: { name: "name", icon: "dollar-sign" },
       date: "13/04/2020",
     },
     {
+      type: "positive",
       title: "Desenvolvimento de site",
       amount: "R$ 12.000,00",
       category: { name: "name", icon: "dollar-sign" },

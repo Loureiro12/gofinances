@@ -10,6 +10,7 @@ import {
   Transactioncard,
   TransactioncardProps,
 } from "../../components/TransactionCard";
+import { useAuth } from "../../hooks/auth";
 
 import {
   Container,
@@ -52,6 +53,7 @@ export function Dashboard() {
   );
 
   const theme = useTheme();
+  const { signOut, user} = useAuth();
 
   function getLastTransactionDate(
     collection: DataListProps[],
@@ -175,15 +177,15 @@ export function Dashboard() {
               <UserInfo>
                 <Photo
                   source={{
-                    uri: "https://avatars.githubusercontent.com/u/65689062?v=4",
+                    uri: user.photo,
                   }}
                 />
                 <User>
                   <UserGreeting>Olá,</UserGreeting>
-                  <UserName>André</UserName>
+                  <UserName>{user.name}</UserName>
                 </User>
               </UserInfo>
-              <LogoutButton onPress={() => {}}>
+              <LogoutButton onPress={signOut}>
                 <Icon name="power" />
               </LogoutButton>
             </UserWrapper>
